@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resilience Academy Household Survey </title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/resAca_hh.css"/>
+    <link rel="stylesheet" href="./css/styles/leaflet-sidebar.css"/>
+    <link rel="stylesheet" href="./css/collapsible.css"/>
+    <link rel="stylesheet" href="./css/styles/leaflet.awesome-markers.css"/>
+
+<script src='http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.js'></script>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="./js/underscore.js"></script>
+<script type="text/javascript" src="./js/scripts/jquery.collapsible.js"></script>
+<script type="text/javascript" src="./js/d3.v3.js"></script>
+<script type="text/javascript" src="./js/d3pie.js"></script>
+<script src="./js/scripts/dimple.v2.2.0.min.js"></script> 
+</head>
+
+<body id="body">
+
+<div id="sidebar" class="leaflet-sidebar ">
+	<div class="leaflet-sidebar-content">
+    <br>
+    <p>Zanzibar Urban West experiences cases of flooding normally caused by periods of intense rainfall. From a stakeholder engagement, we identified flooding hotspots within Urban West and students conducted a household survey of 2300 households in one of these hotspot areas.
+    <br>
+    This area has a water body surrounded by a built up area. We selected households within a 400 metre buffer around this water body. Data collected included characteristics of the buildings, access to water, electricity and sanitation and whether the building occupants have experienced flooding in their specific household or within the area that they live.<br><br> Click on the tabs below to view the results of the survey.</p>
+
+    <div id="firstCollapseMenu" class="collapse-container">
+      <h4><span class="arrow-r"></span>Building Description</h4>
+      <div class="category" name="building" value="1" >
+        <div class="form-check">
+          <br>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="qn1" value="option1">
+          <label class="form-check-label" for="qn1">
+             Building Type
+          </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="qn2" value="option2">
+            <label class="form-check-label" for="qn2" >
+              Building Material
+            </label>
+        </div> 
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="qn3" value="option3">
+            <label class="form-check-label" for="qn3">
+              Building Roof
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="qn4" value="option4">
+            <label class="form-check-label" for="qn4">
+              Building Age
+            </label>
+        </div>
+        <br>
+        <div class="collaps" id="collapseExample">
+            <div class="card card-body">
+            </div>
+        </div>
+      </div>
+      <h4><span class="arrow-r"></span>Water, Sanitation, Electricity</h2>
+      <div class="category" name="wse" value="2">
+        <div class="form-check">
+          <br>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="qn1" value="option1">
+          <label class="form-check-label" for="qn1">
+             Water
+          </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="qn2" value="option2">
+            <label class="form-check-label" for="qn2" >
+              Electricity
+            </label>
+        </div> 
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="qn3" value="option3">
+            <label class="form-check-label" for="qn3">
+              Sanitation
+            </label>
+        </div>
+        <br>
+        <div class="collap" id="collapseExample">
+            <div class="card1 card-body" >
+            </div>
+        </div>
+      </div>
+      <h4><span class="arrow-r"></span>Community Flooding</h4>
+      <div class="category" name="cflooding" value="3">
+        <div class="form-check">
+          <br>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="qn1" value="option1">
+          <label class="form-check-label" for="qn1">
+             Has your community experienced flooding ?
+          </label>
+        </div>
+        <br>
+        <div class="colla" id="collapseExample">
+            <div class="card2 card-body">
+            </div>
+        </div>
+      </div>
+      <h4><span class="arrow-r" ></span>Household Flooding</h4>
+      <div class="category" name="hflooding" value="4">
+        <div class="form-check">
+          <br>
+          <input class="form-check-input" type="radio" name="exampleRadios" id="qn1" value="option1">
+          <label class="form-check-label" for="qn1">
+             Has your household experienced flooding?
+          </label>
+        </div>
+        <br>
+        <div class="coll" id="collapseExample">
+            <div class="card3 card-body">
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+</div>
+<div id="map"class="map"></div>
+
+
+<script type="text/javascript" src="./js/scripts/leaflet-1.0.3.js"/></script><!--js leaflet source code-->
+<script type="text/javascript" src="./js/scripts/proj4-compressed.js"/></script><!--js proj4 source code-->
+<script type="text/javascript" src="./js/scripts/proj4leaflet.js"/></script><!--js proj4leaflet source code-->
+<script type="text/javascript" src="./js/scripts/leaflet-sidebar.js"/></script><!--js proj4leaflet source code-->
+<script type="text/javascript" src="./js/scripts/leaflet.awesome-markers.js"/></script><!--js leaflet markers source code-->
+
+<script type="text/javascript" src="./js/source/oc2/hh_survey.js"/></script><!--js survey source code-->
+<script type="text/javascript" src="./js/source/oc2/water.js"/></script><!--js waterAOI source code-->
+<script type="text/javascript" src="./js/source/oc2/shehiasAOI.js"/></script><!--js shehiasAOI source code-->
+<script type="text/javascript" src="./js/resAca_hh.js"/></script><!--js source source code-->
+
+
+
+</style>
+</body>
+</html>
