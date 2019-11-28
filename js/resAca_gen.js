@@ -2,7 +2,7 @@ var map = new L.map('map').setView([-6.164653, 39.208925], 14 );
 
 //map.addControl(L.control.zoom({position:'topright'}));
 //map.setMaxBounds(map.getBounds());
-var osmlayer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+var osmlayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 // //STYLES
 var styleAmenities = {
@@ -35,31 +35,31 @@ var styleManMade = {
 
 
 var bankIcon = L.icon({
-  iconUrl: '../img/openCities/bank.svg',
+  iconUrl: 'https://opencitieszanzibar.github.io/zanzibarResilienceAcademy/img/openCities/bank.svg',
   iconSize: [10,10]
 });
 var atmIcon = L.icon({
-  iconUrl: '../img/openCities/cash-machine.svg',
+  iconUrl: 'https://opencitieszanzibar.github.io/zanzibarResilienceAcademy/img/openCities/cash-machine.svg',
   iconSize: [10,10]
 });
 var mosqueIcon = L.icon({
-  iconUrl: '../img/openCities/mosque.svg',
+  iconUrl: 'https://opencitieszanzibar.github.io/zanzibarResilienceAcademy/img/openCities/mosque.svg',
   iconSize: [5,5]
 });
 var schoolIcon = L.icon({
-  iconUrl: '../img/openCities/school.svg',
+  iconUrl: 'https://opencitieszanzibar.github.io/zanzibarResilienceAcademy/img/openCities/school.svg',
   iconSize: [5,5]
 });
 var restaurantIcon = L.icon({
-  iconUrl: '../img/openCities/restaurant.svg',
+  iconUrl: 'https://opencitieszanzibar.github.io/zanzibarResilienceAcademy/img/openCities/restaurant.svg',
   iconSize: [5,5]
 });
 var hospitalIcon = L.icon({
-  iconUrl: '../img/openCities/hospital.svg',
+  iconUrl: 'https://opencitieszanzibar.github.io/zanzibarResilienceAcademy/img/openCities/hospital.svg',
   iconSize: [10,10]
 });
 var otherIcon = L.icon({
-  iconUrl: '../img/openCities/other.svg',
+  iconUrl: 'https://opencitieszanzibar.github.io/zanzibarResilienceAcademy/img/openCities/other.svg',
   iconSize: [4,4]
 });
 
