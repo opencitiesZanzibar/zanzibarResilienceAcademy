@@ -2,7 +2,7 @@ var map = new L.map('map').setView([-6.164653, 39.208925], 14 );
 
 //map.addControl(L.control.zoom({position:'topright'}));
 map.setMaxBounds(map.getBounds());
-var osmlayer = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+var osmlayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 
 //STYLES
 //style water
@@ -34,19 +34,19 @@ var style_shehia = {
 
 
 var drainIcon = L.icon({
-  iconUrl: '../img/openCities/drain.svg',
+  iconUrl: 'https://opencitieszanzibar.github.io/zanzibarResilienceAcademy/img/openCities/drain.svg',
   iconSize: [15,15]
 });
 var bdrainIcon = L.icon({
-  iconUrl: '../img/openCities/bf.svg',
+  iconUrl: 'https://opencitieszanzibar.github.io/zanzibarResilienceAcademy/img/openCities/bf.svg',
   iconSize: [20,20]
 });
 var mhIcon = L.icon({
-  iconUrl: '../img/openCities/mh.svg',
+  iconUrl: 'https://opencitieszanzibar.github.io/zanzibarResilienceAcademy/img/openCities/mh.svg',
   iconSize: [5,5]
 });
 var otherIcon = L.icon({
-  iconUrl: '../img/openCities/other.svg',
+  iconUrl: 'https://opencitieszanzibar.github.io/zanzibarResilienceAcademy/img/openCities/other.svg',
   iconSize: [5,5]
 });
 
